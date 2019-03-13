@@ -6,12 +6,12 @@
 // General style
 $font-family-sans-serif:  $body-font;
 $headings-font-family:    $headers-font;
-$body-bg:                 $light-gray;
-$font-size-base: 1rem;
+$body-bg:                 white;
+$font-size-base: 0.6rem;
 
 // Colors
 $gray-base:       $gray;
-$brand-primary:   $blue;
+$brand-primary:   $main;
 $brand-success:   $green;
 $brand-info:      $yellow;
 $brand-danger:    $red;
@@ -23,3 +23,9 @@ $border-radius-large: 2px;
 $border-radius-small: 2px;
 
 // Override other variables below!
+$font-size-h1: 46px;
+$font-size-h2: 28px;
+$font-size-h3: 16px;
+$font-size-h4: 14px;
+
+$headings-line-height: 1.4 !default;

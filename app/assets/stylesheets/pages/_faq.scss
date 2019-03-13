@@ -1,0 +1,113 @@
+$radius: 5px;
+$color1: #46669A;
+$color2: #5F9CCA;
+
+#faq-content {
+  h1 {
+    color: $main;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: light;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+    line-height: 62px;
+  }
+
+  h3 {
+    color: white;
+    font-weight: 500;
+    margin: 10px;
+  }
+
+  h4 {
+    font-weight: 500;
+  }
+
+  p {
+    color: $gray;
+    margin: 15px 60px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+}
+
+.btn-faq {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  color: $main;
+  background-color: transparent;
+  text-align: center;
+  border: 1px solid $main;
+  margin: 25px auto !important;
+  padding: 10px;
+  width: 200px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  transition: all .2s ease-in-out;
+  &:hover {
+    border: 1px solid $main;
+    color: white;
+    opacity: 0.8;
+    text-decoration: none;
+    // transform: scale(1.05);
+    background-color: $main;
+  }
+}
+
+.faq-pattern {
+  background-color: $admin;
+  height: 100px;
+  padding: 20px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  margin: 1rem 0;
+}
+
+.accordion {
+  display: block;
+  width: 60%;
+  margin: 25px auto;
+  padding: 15px;
+}
+
+.active > .accordion-title {
+  border-radius: $radius $radius 0 0;
+
+  &:after {
+    content: '\2212';
+  }
+}
+
+.accordion-title {
+  cursor: pointer;
+  padding: 0.8rem;
+  color: $gray;
+  font-weight: bold;
+  background: $medium-gray;
+  border-radius: $radius;
+  margin-top: 12.5px;
+  margin-bottom: 0;
+
+  &:after {
+    font-family: 'FontAwesome', sans-serif;
+    float: right;
+    content: '\002B';
+  }
+}
+
+.accordion-content {
+  padding: 0.8rem;
+  border-radius: $radius;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
