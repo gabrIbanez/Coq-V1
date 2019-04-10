@@ -18,10 +18,10 @@ gem 'webpacker'
 gem 'jquery-rails'
 gem 'wicked'
 gem 'react-rails'
-gem 'dotenv-rails', groups: [:development, :test]
 
 group :development do
   gem 'web-console', '>= 3.3.0'
+  gem 'dotenv-rails'
 end
 
 group :development, :test do
@@ -32,4 +32,5 @@ group :development, :test do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
   gem 'letter_opener'
+  gem 'dotenv-rails'
 end
