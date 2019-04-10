@@ -1,0 +1,62 @@
+.btn-banner {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  color: $main;
+  background-color: transparent;
+  text-align: center;
+  border: 1px solid $main;
+  margin: 60px auto 8px auto !important;
+  padding: 10px;
+  width: 200px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  transition: all .2s ease-in-out;
+  &:hover {
+    border: 1px solid $main;
+    color: white;
+    opacity: 0.8;
+    text-decoration: none;
+    // transform: scale(1.05);
+    background-color: $main;
+  }
+}
+
+.button-link {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  border: 1px solid white;
+  margin: 80px auto 0 auto;
+  padding: 20px;
+  width: 280px;
+  text-transform: uppercase;
+  transition: all .2s ease-in-out;
+  &:hover {
+    color: white;
+    opacity: 0.8;
+    text-decoration: none;
+    transform: scale(1.1);
+  }
+}
+
+.more-link {
+  font-size: 12px;
+  color: $gray;
+  opacity: 0.7;
+  text-align: center;
+  &:hover {
+    color: $main;
+    text-decoration: none;
+  }
+}
+
+.home-link {
+  font-size: 14px;
+  width: 100%;
+  float: right;
+  text-align: right;
+  padding: 20px;
+}

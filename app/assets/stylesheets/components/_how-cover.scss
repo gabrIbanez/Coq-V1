@@ -1,0 +1,115 @@
+#how-banner {
+  // height: calc(100vh - 50px);
+  box-sizing: border-box;
+  background-color: white;
+  padding: 60px 0;
+  h2 {
+    margin: 0;
+    color: $admin;
+  }
+  p {
+    font-size: 14px;
+    color: $gray;;
+  }
+}
+
+.how-container {
+  margin: 40px 80px 60px 80px;
+}
+
+.how-pst {
+  position: relative;
+  height: 200px;
+}
+
+.pst-summary {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  position: absolute;
+  height: 200px;
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  right: 0;
+  left: 0;
+  background-color: $black;
+  h2 {
+    color: $main !important;
+    padding-top: 0 !important;
+  }
+}
+
+.pst-line {
+  display: flex;
+  align-items: center;
+  .pst-bullet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    background-color: $gray;
+    border-radius: 30px;
+    margin-left: 40px;
+  }
+  .pst-text {
+    color: white;
+    margin-left: 40px;
+  }
+}
+
+.fa-style-1 {
+  color: white;
+  font-size: 18px;
+}
+
+.pst-image {
+  position: absolute;
+  top: 50px;
+  height: 120px;
+  width: 100%;
+  background-image: image-url('how-banner.jpg');
+  background-position: center;
+}
+
+.how-steps {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 35px 80px 0 80px;
+  opacity: 0;
+}
+
+.how-step {
+  width: 320px;
+  padding: 20px;
+  h3 {
+    color: $main;
+    font-weight: 700;
+  }
+  p {
+    text-align: center;
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .pst-summary {
+    width: 100%;
+  }
+  .pst-image {
+    display: none;
+  }
+  .how-steps {
+    display: block;
+    margin: 35px auto;
+  }
+  .how-step {
+    width: 100%;
+    padding: 5px 40px;
+  }
+  p {
+    text-align: center;
+  }
+}

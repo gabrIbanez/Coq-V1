@@ -1,0 +1,124 @@
+#home-banner {
+  background: $main;
+  color: white;
+  height: calc(100vh - 80px);
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .btn-primary {
+    margin: 0px auto;
+    font-size: 16px;
+    font-weight: 500;
+    color: #E30054;
+    background-color: white;
+    border-color: $white;
+    &:hover {
+      color: $white;
+      background-color: #b00041;
+      border-color: $white;
+    }
+  }
+  .photo {
+    margin: 20px;
+  }
+}
+
+.headline {
+  // height: 80vh;
+  display: flex;
+  flex-direction: column;
+  h1 {
+    color: $main;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+    line-height: 62px;
+  }
+  h1 span {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  p {
+    font-size: 16px;
+    color: $light-gray;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 500;
+  }
+}
+
+.home-form {
+  background-color: rgba(255, 255, 255, 0.00);
+  margin: 35px 0 60px 0;
+  h2 {
+    font-size: 28px;
+    color: $white;
+    padding-top: 20px;
+    text-align: center;
+    font-weight: 500;
+  }
+  .help-block {
+    font-size: 12px;
+    margin-bottom: 0;
+    text-align: left;
+  }
+}
+
+.home-form-content {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+.form-control {
+  height: 44px;
+  margin-top: 10px;
+  border: 1px solid $main;
+  font-size: 16px;
+  background-color: $white;
+  border-radius: 0;
+}
+
+.testimonials-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.home-testimonial {
+  width: 280px;
+}
+
+@media (max-width: 800px) {
+  #home-banner {
+    box-sizing: border-box;
+    height: auto;
+  }
+  .home-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .empty-space {
+    display: none;
+  }
+  .headline {
+    display: block;
+    height: auto;
+    box-sizing: border-box;
+    h1, p {
+      text-align: center;
+      margin: 10px 15px;
+    }
+  }
+  .testimonials-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .home-testimonial img{
+    height: 100px;
+    width: 100px;
+  }
+}

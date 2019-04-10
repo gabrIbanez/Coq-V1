@@ -1,0 +1,175 @@
+<div id="home-banner">
+  <%= render 'animations/clouds' %>
+
+  <div class="container-fluid">
+    <div class="home-block">
+      <div class="headline">
+        <div class="empty-space"></div>
+        <h1><span>Vos amis ne diront plus jamais "je connais"</span></h1>
+        <p>Weekends surprises à moins de 2h30 de Paris dans la France authentique et méconnue.</p>
+      </div>
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+          <div class="home-form text-center">
+            <!-- <h2>I am a Franchouillard</h2> -->
+            <div class="home-form-content">
+              <%= simple_form_for @journey do |f| %>
+                <div id="date-change">
+                  <%= react_component("DatesSelection") %>
+                </div>
+                <%= f.input :people_count, prompt: "Nombre de personnes", label: false, collection: ['1 trotteur', '2 trotteurs', '3 trotteurs', '4 trotteurs', '5 trotteurs', '6 trotteurs'], error: 'Dites-nous à combien vous désirez partir!' %>
+                <%= f.submit "JE REDÉCOUVRE LE PAYS !", class: "btn btn-primary" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <div class="col-3"></div>
+      </div>
+    </div>
+    <div class="testimonials-container text-center">
+      <div class="home-testimonial">
+        <%= image_tag("tmn1.jpg", height: 200, width: 200, class: "photo rounded-circle fade-in") %>
+        <p>"Très belle expérience ! Un bon bol d'air rempli de découvertes qui font un bien fou ! Enfin un peu de verdure." - <b>Pierre</b></p>
+      </div>
+      <div class="home-testimonial text-center">
+        <%= image_tag("tmn2.jpg", height: 200, width: 200, class: "photo rounded-circle fade-in") %>
+        <p>"Je ne pensais franchement pas pouvoir encore être étonnée dans mon propre pays, merci à vous c'était top !"" - <B>Marie</B></p>
+      </div>
+      <div class="home-testimonial text-center">
+        <%= image_tag("tmn3.jpg", height: 200, width: 200, class: "photo rounded-circle fade-in") %>
+        <p>"L'accueil de nos hôtes était adorable. Nous sommes heureux d'avoir pu déconnecter dans un coin aussi féérique." - <B>Sophie</B></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="how-banner" class="text-center">
+  <h2>Comment Coq-trotter sereinement ?</h2>
+  <div class="how-container">
+    <p>Besoin de souffler et jamais d’idées ?</p>
+    <p>De vous ressourcer simplement dans des coins magnifiques ?</p>
+    <p>Ou simplement de chiller pépouze dans un cadre inspirant dont vous n’avez jamais entendu parlé ?</p>
+  </div>
+  <div class="how-pst">
+    <div class="pst-image"></div>
+    <div class="pst-summary">
+      <div class="pst-line">
+        <div class="pst-bullet">
+          <i class="fa fa-train fa-style-1" aria-hidden="true"></i>
+        </div>
+        <div class="pst-text">2h30 max de transport, avec ou sans véhicule personnel</div>
+      </div>
+      <div class="pst-line">
+        <div class="pst-bullet">
+          <i class="fa fa-bed fa-style-1" aria-hidden="true"></i>
+        </div>
+        <div class="pst-text">Une à trois nuits</div>
+      </div>
+      <div class="pst-line">
+        <div class="pst-bullet">
+          <i class="fa fa-thumbs-up fa-style-1" aria-hidden="true"></i>
+        </div>
+        <div class="pst-text">Lieu surprise d'exception</div>
+      </div>
+      <h2>À partir de 90€/pers</h2>
+    </div>
+  </div>
+
+<div class="how-steps fade-in">
+    <div class="how-step text-center">
+      <%= image_tag("calendar.png", height: 60)%>
+      <h3>1 - JE CONFIGURE MON TRAJET</h3>
+      <p>Je saisis le nombre de voyageurs, mes dates, ainsi que le type d’environnement et de logement dans lequel je désire partir. De toute façon ça sera top 🚀</p>
+    </div>
+    <div class="how-step text-center">
+      <%= image_tag("map.png", height: 60)%>
+      <h3>2 - JE DÉFINIS MES PRÉFÉRENCES</h3>
+      <p>J’en profite pour préciser le genre de lieux que j’aimerais découvrir et si je désire réserver une activité sur place. L’équipe se chargera alors de vous préparer un trip aux petits oignons 👍</p>
+    </div>
+    <div class="how-step text-center">
+      <%= image_tag("backpack.png", height: 60) %>
+      <h3>3 - PROFITEZ DE VOTRE SURPRISE 😍</h3>
+      <p>C’est le week-end, à vous le grand air ! Un horaire, un train réservé par nos soins ou votre voiture… Vous voilà partis vers une destination qui ne vous sera révélée que 24h avant de prendre la route.</p>
+    </div>
+  </div>
+  <%= link_to "JE PARS !", root_path(anchor: "home-banner"), class: "btn btn-primary btn-banner" %>
+  <%= link_to "Dites m'en plus", root_path(anchor: "info-banner"), class: "more-link" %>
+</div>
+
+<div id="gift-banner">
+  <div class="gift-content">
+    <div class="gift-pst">
+      <p>Vos proches aiment le camembert ?</p>
+      <p>Découvrir de nouveaux endroits au charme fou ?</p>
+      <p>Les soirées au coin du feu</p>
+      <p>Les promenades sur les remparts</p>
+    </div>
+    <div class="gift-hk fade-in">
+      <h2>OFFREZ LEUR UN WEEK-END SURPRISE !</h2>
+      <p>A very french qualität séjour-cadeau qui saura les combler</p>
+    </div>
+    <%= image_tag("gift.png", height: 200, class: "gift-image fade-in") %>
+  </div>
+  <%= link_to "OFFRIR UN CADEAU", root_path(anchor: "home-banner"), class: "btn btn-primary btn-banner" %>
+  <%= link_to "Comment faire un cadeau ?", faq_path(anchor: "make-a-gift"), class: "more-link" %>
+</div>
+
+<div id="info-banner" class="text-center">
+  <h2>Dates, transport et hébergement</h2>
+  <div class="detail-cards fade-in">
+    <div class="card card-dates">
+      <i class="fa fa-clock-o fa-style-2" aria-hidden="true"></i>
+      <h3>DATES</h3>
+      <p>Choisissez de partir de une à trois nuits dans un créneau du jeudi au lundi compris.
+      Tous nos départs s’effectuent à partir de 18h30 afin de vous permettre de profiter au maximum de votre virée franchouillarde, tout en respectant vos horaires de bureau.</p>
+    </div>
+    <div class="card card-transport">
+      <i class="fa fa-train fa-style-2" aria-hidden="true"></i>
+      <h3>TRANSPORT</h3>
+      <p>Restez cool au moment de votre départ ! Toutes nos destinations sont atteignables en train ou voiture en moins de 2h30 pour plus de liberté d’esprit. Oubliez les longs trajets pour partir en week-end et laissez vous transporter.</p>
+    </div>
+    <div class="card card-housing">
+      <i class="fa fa-bed fa-style-2" aria-hidden="true"></i>
+      <h3>LOGEMENT</h3>
+      <p>Au sein de chambres d’hôtes, de logements de choix, ou d’hôtels de charme en fonction de votre sélection. Nous mettons un point d’honneur à ce que vous ressentiez le terroir dès votre arrivée ! Vous pouvez dormir sur vos deux oreilles. Pour peu que celles-ci soient plates. Et horizontales.</p>
+    </div>
+    <div class="card card-activity">
+      <i class="fa fa-bicycle fa-style-2" aria-hidden="true"></i>
+      <h3>ACTIVITÉ OPTIONNELLE</h3>
+      <p>Encore plus de surprise ! Envie d’un moment sportif un peu spécial, d’un dîner aux chandelles ou d’une visite croquignolesque ? Alors faites-nous part de vos préférence ! Avec ou sans option, un petit guide des joyeusetés locales vous sera envoyé par mail. </p>
+    </div>
+  </div>
+  <%= link_to "JE RÉSERVE", root_path(anchor: "home-banner"), class: "btn btn-primary btn-banner" %>
+  <%= link_to "Besoin de plus d'informations ?", faq_path, class: "more-link" %>
+</div>
+
+<div id="testimonials-banner">
+  <div class="testimonials-title">
+    <h2>ILS AIMENT LE COQ TROTTEUR</h2>
+    <h3>(...et on les aime aussi)</h3>
+    <%= link_to 'Découvrir les témoignages', testimonials_path, class: "button-link" %>
+  </div>
+  <div class="testimonials-car">
+    <div class="t-one">
+      <div class="quote-container">
+        <blockquote>
+          <p>Notre séjour avec le Coq Trotteur était formidable. Nous ne pensions pas découvrir autant de chose dans un endroit dont nous n'avions pourtant jamais entendu parlé !</p>
+          <cite>Laura & Stéphanie</cite>
+        </blockquote>
+        <%= link_to 'Plus d\'opinions 💪', testimonials_path, class: "home-link" %>
+      </div>
+    </div>
+    <div class="t-two"></div>
+    <div class="t-three"></div>
+    <div class="t-four">
+      <div class="quote-container">
+        <blockquote>
+          <p>Expérience de qualité, on se sent directement accueilli et l'on enchaine des découvertes dans une France que décisémment on ne connait pas si bien que ça. Une vraie déconnexion et plein de découvertes !</p>
+          <cite>Jérémy</cite>
+        </blockquote>
+        <%= link_to 'Voir d\'autres avis 👌', testimonials_path, class: "home-link " %>
+      </div>
+    </div>
+  </div>
+</div>

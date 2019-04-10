@@ -1,0 +1,13 @@
+<%= render 'shared/step-bar' %>
+<div id="details-banner">
+  <div class="details-form">
+    <div class="details-form-content">
+      <h2>Environnement désiré</h2>
+      <%= simple_form_for @journey, url: wizard_path do |f| %>
+        <%= f.input :destination_type, prompt: "Type de destination", label: false, collection: ['Ville', 'Mer', 'Campagne'], error: 'Allez, on est sûr que vous avez une petite préférence ;)' %>
+        <%= f.submit "SUIVANT", class: "btn btn-primary" %>
+      <% end %>
+      <% # link_to 'Skip', next_wizard_path %>
+    </div>
+  </div>
+</div>

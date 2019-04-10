@@ -1,0 +1,13 @@
+<%= render 'shared/step-bar' %>
+<div id="details-banner">
+  <div class="details-form">
+    <div class="details-form-content">
+      <h2>Transport</h2>
+      <%= simple_form_for @journey, url: wizard_path do |f| %>
+        <%= f.input :transport_type, prompt: "Type de transport", label: false, collection: ['Je veux utiliser mon propre véhicule', 'Train au départ de Paris'], error: 'Merci de choisir un type de transport' %>
+        <%= f.submit "SUIVANT", class: "btn btn-primary" %>
+      <% end %>
+      <% # link_to 'Skip', next_wizard_path %>
+    </div>
+  </div>
+</div>

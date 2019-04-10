@@ -1,0 +1,24 @@
+<%= render 'shared/step-bar' %>
+<div id="details-banner">
+  <div class="details-form">
+    <div class="user-form">
+      <div class="user-form-content">
+        <h2>Vos informations</h2>
+        <%= simple_form_for @journey, url: wizard_path, defaults: { label: false, input_html: { class: 'user-input' } }  do |f| %>
+           <%= f.input :name, placeholder: "Prénom*", error: 'Nous avons besoin de votre nom :)' %>
+           <%= f.input :surname, placeholder: "Nom de famille*", error: 'Votre prénom est nécessaire à la réservation !' %>
+           <%= f.input :email, placeholder: "Votre adresse mail", error: 'Votre mail est invalide, veuillez réessayer.' %>
+           <%= f.input :birth_date, as: :date, start_year: Date.today.year - 90,
+                                 end_year: Date.today.year - 17,
+                                 label: "Date de naissance*",
+                                 order: [ :day, :month, :year],
+                                 selected: Date.today.year - 17 %>
+          <%= f.input :phone, placeholder: "Téléphone portable*", input_html: { id: 'user-phone' }, error: 'Le format est invalide.' %>
+          <%= f.input :is_a_surprise?, label: 'Ce séjour est une surprise', as: :boolean %>
+          <%= f.submit "SUIVANT", class: "btn btn-primary" %>
+        <% end %>
+        <% # link_to 'Skip', next_wizard_path %>
+      </div>
+    </div>
+  </div>
+</div>

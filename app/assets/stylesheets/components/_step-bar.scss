@@ -1,0 +1,50 @@
+#step-bar {
+  position: fixed;
+  top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9998;
+  height: 80px;
+  width: 100%;
+  background-color: $admin;
+  p {
+    font-size: 32px;
+    margin: 0;
+  }
+}
+
+.all-steps {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 700px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // width: 180px;
+  opacity: 0.5;
+  h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+  }
+}
+
+.active-step {
+  opacity: 1;
+}
+
+@media (max-width: 800px) {
+  #step-bar {
+    h3 {
+      font-size: 12px !important;
+    }
+  }
+}
