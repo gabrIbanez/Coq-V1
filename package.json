@@ -18,7 +18,8 @@
     "react-dom": "^16.8.6",
     "react_ujs": "^2.4.4",
     "reactstrap": "^7.1.0",
-    "select2": "^4.0.6-rc.1"
+    "select2": "^4.0.6-rc.1",
+    "webpacker": "^4.2.3"
   },
   "devDependencies": {
     "webpack-dev-server": "^3.3.1"
