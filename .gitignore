@@ -14,7 +14,7 @@ yarn-error.log
 .byebug_history
 .env*
 
-#/public/packs
+/public/packs
 /public/packs-test
 /node_modules
 /yarn-error.log
